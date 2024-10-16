@@ -78,7 +78,14 @@ button.addEventListener('click', () => {
         quantity: 1
       });
     }
+    // how we can calculate the total quantity of cart
+    let cartQuantity = 0;
 
-    console.log(cart);
+    cart.forEach((item) => {
+      cartQuantity += item.quantity
+    })
+
+    document.querySelector('.js-cart-quantity') .innerHTML = cartQuantity;
+
   });
 });
